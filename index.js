@@ -45,7 +45,7 @@ app.post('/flights',(req,res)=>{
     }else if(!(dateTrial)){
       return  res.status(400).json({
         'message':'invalid date format',
-        'info':'expected format DAY:MONTH:YEAR'
+        'info':'expected format DAY-MONTH-YEAR'
       })
     }else if(!(priceTest)){
       return  res.status(400).json({
@@ -111,7 +111,7 @@ app.patch('/flights/:title',(req,res)=>{
     }else if((req.body) && (!(dateTrial))){
       return  res.status(400).json({
         'message':'invalid date format',
-        'info':'expected format DAY:MONTH:YEAR'
+        'info':'expected format DAY-MONTH-YEAR'
       })
 
     }else if((req.body) && (!(trial))){
